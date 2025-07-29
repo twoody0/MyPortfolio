@@ -21,5 +21,25 @@
         When I’m not coding, you’ll usually find me gaming on my PS5 or PC, hiking around the Pacific Northwest, or brainstorming new app ideas over coffee.
       </p>
     </div>
+
+    <!-- GitHub Activity -->
+    <div class="pt-12 border-t border-gray-700">
+      <h2 class="text-2xl font-semibold mb-6 text-center">GitHub Activity</h2>
+
+      <!-- Contribution Streak -->
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=twoody0&theme=tokyonight&hide_border=true"
+           alt="GitHub Streak Stats"
+           class="rounded-lg shadow-lg w-full max-w-2xl mx-auto" />
+
+      <!-- Stats Card -->
+      <img src="https://github-readme-stats.vercel.app/api?username=twoody0&show_icons=true&theme=tokyonight&hide_border=true"
+           alt="GitHub Stats"
+           class="rounded-lg shadow-lg mt-6 w-full max-w-2xl mx-auto" />
+
+      <!-- Top Languages -->
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=twoody0&layout=compact&theme=tokyonight&hide_border=true"
+           alt="Top Languages"
+           class="rounded-lg shadow-lg mt-6 w-full max-w-2xl mx-auto" />
+    </div>
   </section>
 </template>

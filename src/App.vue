@@ -3,6 +3,7 @@
     <nav class="bg-gray-800 p-4 flex justify-center gap-6 text-lg font-medium">
       <router-link to="/" class="link-underline">Home</router-link>
       <router-link to="/about" class="link-underline">About</router-link>
+      <router-link to="/skills" class="link-underline">Skills</router-link>
       <router-link to="/projects" class="link-underline">Projects</router-link>
       <router-link to="/certifications" class="link-underline">Certifications</router-link>
       <router-link to="/contact" class="link-underline">Contact</router-link>

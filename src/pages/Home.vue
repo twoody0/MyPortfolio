@@ -1,6 +1,6 @@
 <template>
   <section class="min-h-screen bg-gray-900 text-white flex items-center justify-center px-6">
-    <div class="max-w-4xl text-center space-y-8 animate-fadeIn">
+    <div class="max-w-4xl text-center space-y-8 animate-fadeInUp">
       <!-- Profile Image -->
       <div class="flex justify-center">
         <img src="/profile.jpg"
@@ -9,10 +9,10 @@
       </div>
 
       <!-- Name -->
-      <h1 class="text-5xl font-bold opacity-0 animate-fadeIn animation-delay-100">Hi, I'm Tyler Woody</h1>
+      <h1 class="text-5xl font-bold opacity-0 animate-fadeInUp animation-delay-100">Hi, I'm Tyler Woody</h1>
 
       <!-- Value Prop -->
-      <p class="text-xl text-gray-300 opacity-0 animate-fadeIn animation-delay-300">
+      <p class="text-xl text-gray-300 opacity-0 animate-fadeInUp animation-delay-300">
         I build performant web experiences with clean, modern code.
       </p>
 

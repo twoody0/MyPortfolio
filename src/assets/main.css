@@ -32,6 +32,29 @@
     }
   }
 
+  @keyframes flipInUp {
+    0% {
+      opacity: 0;
+      transform: rotateX(90deg) translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: rotateX(0deg) translateY(0);
+    }
+  }
+
+  .animate-flipInUp {
+    animation: flipInUp 0.8s ease-out forwards;
+    transform-origin: bottom;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+  }
+
+  .perspective {
+    perspective: 1000px;
+  }
+
   .animate-fadeInLeft {
     animation: fadeInLeft 1s ease-out forwards;
   }

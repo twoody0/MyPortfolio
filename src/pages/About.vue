@@ -35,11 +35,6 @@
       <img src="https://github-readme-stats.vercel.app/api?username=twoody0&show_icons=true&theme=tokyonight&hide_border=true"
            alt="GitHub Stats"
            class="rounded-lg shadow-lg mt-6 w-full max-w-2xl mx-auto" />
-
-      <!-- Top Languages -->
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=twoody0&layout=compact&theme=tokyonight&hide_border=true"
-           alt="Top Languages"
-           class="rounded-lg shadow-lg mt-6 w-full max-w-2xl mx-auto" />
     </div>
   </section>
 </template>

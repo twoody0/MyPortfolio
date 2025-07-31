@@ -1,3 +1,5 @@
+using Amazon.SimpleEmail;
+
 namespace PortfolioBackend;
 
 public class Startup
@@ -13,6 +15,7 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddControllers();
+        services.AddAWSService<IAmazonSimpleEmailService>();
         services.AddCors(options =>
         {
             options.AddDefaultPolicy(policy =>

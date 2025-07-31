@@ -45,3 +45,6 @@ VSWorkspaceState.json
 # Build artifacts
 bin/
 obj/
+
+# Ignore environment files
+.env*

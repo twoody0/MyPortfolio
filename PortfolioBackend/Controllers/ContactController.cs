@@ -21,8 +21,8 @@ public class ContactController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> Post(ContactRequest request)
     {
-        var subject = $"New Contact Form Message from {request.Name}";
-        var body = $"Name: {request.Name}\nEmail: {request.Email}\nMessage:\n{request.Message}";
+        string subject = $"New Contact Form Message from {request.Name}";
+        string body = $"Name: {request.Name}\nEmail: {request.Email}\nMessage:\n{request.Message}";
 
         var sendRequest = new SendEmailRequest
         {

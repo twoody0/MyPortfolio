@@ -4,51 +4,41 @@
       <h1 class="text-4xl font-bold mb-6 text-center">Contact Me</h1>
       <p class="mb-8 text-gray-300 text-center">Feel free to reach out via this form or email me directly.</p>
 
-      <form @submit.prevent="handleSubmit" class="space-y-6">
+      <form @submit.prevent="sendContact" class="max-w-xl mx-auto space-y-6">
         <div>
           <label class="block mb-1 text-gray-400" for="name">Name</label>
-          <input id="name"
-                 name="name"
-                 v-model="form.name"
-                 required
-                 type="text"
-                 class="w-full px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded focus:outline-none focus:ring focus:border-indigo-500" />
+          <input id="name" type="text" v-model="name"
+                 class="w-full px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded" />
+          <p v-if="errors.name" class="text-red-500 text-sm mt-1">{{ errors.name }}</p>
         </div>
 
         <div>
           <label class="block mb-1 text-gray-400" for="email">Email</label>
-          <input id="email"
-                 name="email"
-                 v-model="form.email"
-                 required
-                 type="email"
-                 class="w-full px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded focus:outline-none focus:ring focus:border-indigo-500" />
+          <input id="email" type="email" v-model="email"
+                 class="w-full px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded" />
+          <p v-if="errors.email" class="text-red-500 text-sm mt-1">{{ errors.email }}</p>
         </div>
 
         <div>
           <label class="block mb-1 text-gray-400" for="message">Message</label>
-          <textarea id="message"
-                    name="message"
-                    v-model="form.message"
-                    required
-                    rows="5"
-                    class="w-full px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded focus:outline-none focus:ring focus:border-indigo-500"></textarea>
+          <textarea id="message" v-model="message" rows="5"
+                    class="w-full px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded"></textarea>
+          <p v-if="errors.message" class="text-red-500 text-sm mt-1">{{ errors.message }}</p>
         </div>
 
         <button type="submit"
-                class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded transition w-full">
+                class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded transition">
           Send Message
         </button>
       </form>
 
       <!-- Success message -->
-      <p v-if="success" class="mt-6 text-green-400 text-center">
-        ✅ Thanks! Your message has been sent.
+      <p v-if="successMessage" class="text-green-500 text-center font-semibold mt-4">
+        {{ successMessage }}
       </p>
 
-      <!-- Error message -->
-      <p v-if="error" class="mt-6 text-red-400 text-center">
-        ❌ Something went wrong. Please try again.
+      <p v-if="errorMessage" class="text-red-500 text-center font-semibold mt-4">
+        {{ errorMessage }}
       </p>
     </div>
   </section>
@@ -57,36 +47,33 @@
 <script setup>
   import { ref } from 'vue'
 
-  const form = ref({
-    name: '',
-    email: '',
-    message: ''
-  })
+  const name = ref('')
+  const email = ref('')
+  const message = ref('')
+  const errors = ref({})
 
-  const success = ref(false)
-  const error = ref(false)
+  const validateForm = () => {
+    errors.value = {}
 
-  async function handleSubmit() {
-    success.value = false
-    error.value = false
+    if (!name.value.trim()) errors.value.name = "Name is required"
+    if (!email.value.trim()) errors.value.email = "Email is required"
+    else if (!/\S+@\S+\.\S+/.test(email.value)) errors.value.email = "Email is invalid"
 
-    try {
-      const response = await fetch('https://formspree.io/f/xovllpgg', {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json'
-        },
-        body: new FormData(document.querySelector('form'))
-      })
+    if (!message.value.trim()) errors.value.message = "Message is required"
 
-      if (response.ok) {
-        success.value = true
-        form.value = { name: '', email: '', message: '' }
-      } else {
-        error.value = true
-      }
-    } catch (err) {
-      error.value = true
-    }
+    return Object.keys(errors.value).length === 0
+  }
+
+  const sendContact = async () => {
+    if (!validateForm()) return
+
+    const response = await fetch('https://localhost:52634/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: name.value, email: email.value, message: message.value })
+    })
+
+    const result = await response.json()
+    alert(result.message)
   }
 </script>

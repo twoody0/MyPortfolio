@@ -72,7 +72,7 @@
         Cloud: ["Azure SQL", "Azure Blob Storage"]
       },
       link: "https://your-live-site.com",
-      github: "https://github.com/twoody0/storybook-ai"
+      github: "https://github.com/AustinH5544/Hackathon-2025"
     },
     {
       title: "Workout Tracker App",
@@ -84,7 +84,7 @@
         Backend: ["C#", "SQLite"],
         Architecture: ["Dependency Injection"]
       },
-      github: "https://github.com/twoody0/workout-tracker"
+      github: "https://github.com/twoody0/WorkoutTracker"
     },
     {
       title: "Portfolio Website",
@@ -94,7 +94,7 @@
       techStack: {
         Frontend: ["Vue", "Vite", "Tailwind CSS", "JavaScript"]
       },
-      github: "https://github.com/twoody0/portfolio"
+      github: "https://github.com/twoody0/MyPortfolio"
     }
   ]
 

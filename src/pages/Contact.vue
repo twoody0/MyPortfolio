@@ -46,11 +46,14 @@
 
 <script setup>
   import { ref } from 'vue'
+  import { API_BASE } from '../constants'
 
   const name = ref('')
   const email = ref('')
   const message = ref('')
   const errors = ref({})
+  const successMessage = ref('')
+  const errorMessage = ref('')
 
   const validateForm = () => {
     errors.value = {}
@@ -65,15 +68,36 @@
   }
 
   const sendContact = async () => {
+    successMessage.value = ''
+    errorMessage.value = ''
+
     if (!validateForm()) return
 
-    const response = await fetch('https://localhost:52634/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name: name.value, email: email.value, message: message.value })
-    })
+    try {
+      const response = await fetch(`${API_BASE}/contact`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: name.value,
+          email: email.value,
+          message: message.value
+        })
+      })
 
-    const result = await response.json()
-    alert(result.message)
+      const result = await response.json()
+
+      if (response.ok) {
+        successMessage.value = result.message || "Message sent!"
+        name.value = ''
+        email.value = ''
+        message.value = ''
+      } else {
+        errorMessage.value = result.message || "Something went wrong."
+        console.error('Server error:', result)
+      }
+    } catch (err) {
+      errorMessage.value = "Network error. Please try again later."
+      console.error('Network error:', err)
+    }
   }
 </script>

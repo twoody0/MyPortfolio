@@ -12,7 +12,7 @@ Welcome to my personal developer portfolio — a modern, performant, and mobile-
 - 🎨 Clean and modern design with Tailwind CSS
 - 🖼 Dynamic project gallery with flip animations
 - 📱 Fully responsive design for all devices
-- 🌐 Hosted with AWS S3 + CloudFront + Route 53 + Cloudflare
+- 🌐 Hosted with AWS S3 + CloudFront + Cloudflare
 - 🔒 HTTPS with a custom SSL certificate via AWS ACM
 
 ---
@@ -21,7 +21,7 @@ Welcome to my personal developer portfolio — a modern, performant, and mobile-
 
 - **Frontend:** Vue 3, Vite, Tailwind CSS
 - **Hosting:** AWS S3 (static site), AWS CloudFront (CDN)
-- **Domain & DNS:** Route 53 + Cloudflare
+- **Domain & DNS:** Cloudflare
 - **SSL:** AWS ACM with HTTPS support
 
 ---
@@ -38,27 +38,32 @@ my-portfolio/
 │   └── App.vue        # Root component
 ├── index.html         # HTML template
 ├── main.js            # App entry point
-├── tailwind.config.js # Tailwind custom config
 └── vite.config.js     # Vite dev/build config
 ```
 
 ---
 
-## 🚧 Deployment (AWS)
+## 🚀 Deployment (CI/CD with GitHub Actions + AWS)
 
-This site is built and deployed manually via AWS CLI:
+This site is automatically deployed to AWS S3 + CloudFront using GitHub Actions whenever changes are pushed to the `master` branch.
 
-### 🏗 Build the Site
+### 🧠 How It Works
 
-```bash
-npm run build
-```
+- GitHub Actions builds the project using `vite build`.
+- The `dist/` folder is synced to the S3 bucket `tyler-woody-dev-site`.
+- A CloudFront invalidation is optionally triggered to clear the cache and serve the latest version.
 
-### 📤 Upload to S3
+### 🛠 AWS Setup Required
 
-```bash
-aws s3 sync dist/ s3://tyler-woody-dev-site --delete
-```
+Make sure you have these secrets configured in your GitHub repo:
+- Settings -> Secrets and variables -> Actions -> New repository secret
+
+| Secret Name         | Description                      |
+|---------------------|----------------------------------|
+| `AWS_ACCESS_KEY_ID` | IAM user access key              |
+| `AWS_SECRET_ACCESS_KEY` | IAM user secret key         |
+| `AWS_REGION`        | AWS region of your bucket        |
+| `DISTRIBUTION_ID`   | (Optional) CloudFront distribution ID for cache invalidation |
 
 ### 🌍 CloudFront Cache Invalidation
 
@@ -94,6 +99,10 @@ Feel free to reach out or connect with me:
 - Email: tyler@tyler-woody.dev
 
 ---
+
+## 🔗 Related
+
+- [Portfolio Backend](https://github.com/twoody0/MyPortfolio/tree/master/PortfolioBackend)
 
 ## 📄 License
 

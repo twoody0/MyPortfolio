@@ -1,23 +1,23 @@
-# Tyler Woody's Developer Portfolio
+﻿# Tyler Woody's Developer Portfolio
 
-Welcome to my personal developer portfolio � a modern, performant, and mobile-friendly site built with [Vue 3](https://vuejs.org/), [Vite](https://vitejs.dev/), and [Tailwind CSS](https://tailwindcss.com/). This site showcases my projects, technical skills, and development journey.
+Welcome to my personal developer portfolio — a modern, performant, and mobile-friendly site built with [Vue 3](https://vuejs.org/), [Vite](https://vitejs.dev/), and [Tailwind CSS](https://tailwindcss.com/). This site showcases my projects, technical skills, and development journey.
 
-?? [Visit Live Site](https://www.tyler-woody.dev)
-
----
-
-## ?? Features
-
-- ?? Fast loading with Vite
-- ?? Clean and modern design with Tailwind CSS
-- ?? Dynamic project gallery with flip animations
-- ?? Fully responsive design for all devices
-- ?? Hosted with AWS S3 + CloudFront + Route 53 + Cloudflare
-- ?? HTTPS with a custom SSL certificate via AWS ACM
+🔗 [Visit Live Site](https://www.tyler-woody.dev)
 
 ---
 
-## ?? Tech Stack
+## 🚀 Features
+
+- ⚡️ Fast loading with Vite
+- 🎨 Clean and modern design with Tailwind CSS
+- 🖼 Dynamic project gallery with flip animations
+- 📱 Fully responsive design for all devices
+- 🌐 Hosted with AWS S3 + CloudFront + Route 53 + Cloudflare
+- 🔒 HTTPS with a custom SSL certificate via AWS ACM
+
+---
+
+## 🛠 Tech Stack
 
 - **Frontend:** Vue 3, Vite, Tailwind CSS
 - **Hosting:** AWS S3 (static site), AWS CloudFront (CDN)
@@ -26,41 +26,41 @@ Welcome to my personal developer portfolio � a modern, performant, and mobile-fr
 
 ---
 
-## ?? Project Structure
+## 📁 Project Structure
 
 ```
 my-portfolio/
-??? public/            # Static assets (favicon, profile image)
-??? src/
-?   ??? assets/        # Component-specific assets
-?   ??? components/    # Vue components like ProjectCard.vue
-?   ??? pages/         # Main views (Home, Projects, About, etc.)
-?   ??? App.vue        # Root component
-??? index.html         # HTML template
-??? main.js            # App entry point
-??? tailwind.config.js # Tailwind custom config
-??? vite.config.js     # Vite dev/build config
+├── public/            # Static assets (favicon, profile image)
+├── src/
+│   ├── assets/        # Component-specific assets
+│   ├── components/    # Vue components like ProjectCard.vue
+│   ├── pages/         # Main views (Home, Projects, About, etc.)
+│   └── App.vue        # Root component
+├── index.html         # HTML template
+├── main.js            # App entry point
+├── tailwind.config.js # Tailwind custom config
+└── vite.config.js     # Vite dev/build config
 ```
 
 ---
 
-## ?? Deployment (AWS)
+## 🚧 Deployment (AWS)
 
 This site is built and deployed manually via AWS CLI:
 
-### ?? Build the Site
+### 🏗 Build the Site
 
 ```bash
 npm run build
 ```
 
-### ?? Upload to S3
+### 📤 Upload to S3
 
 ```bash
 aws s3 sync dist/ s3://tyler-woody-dev-site --delete
 ```
 
-### ?? CloudFront Cache Invalidation
+### 🌍 CloudFront Cache Invalidation
 
 ```bash
 aws cloudfront create-invalidation \
@@ -70,7 +70,7 @@ aws cloudfront create-invalidation \
 
 ---
 
-## ?? DNS Notes
+## 🧩 DNS Notes
 
 - `tyler-woody.dev` and `www.tyler-woody.dev` both point to the same CloudFront distribution.
 - Cloudflare is used to manage DNS.
@@ -78,14 +78,14 @@ aws cloudfront create-invalidation \
 
 ---
 
-## ?? Future Plans
+## 🧠 Future Plans
 
 - Add a blog with Markdown support
 - Integrate GitHub Projects API
 
 ---
 
-## ?? Contact
+## 📫 Contact
 
 Feel free to reach out or connect with me:
 
@@ -95,6 +95,6 @@ Feel free to reach out or connect with me:
 
 ---
 
-## ?? License
+## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).

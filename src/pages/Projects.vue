@@ -89,10 +89,14 @@
     {
       title: "Portfolio Website",
       description:
-        "This portfolio website! Built with Vue 3, Vite, and Tailwind CSS. Includes animations and routing.",
+        "This is my live portfolio website! Built with Vue 3, Vite, and Tailwind CSS for the frontend. The backend is powered by AWS Lambda and API Gateway, with email notifications sent via Amazon SES. Static hosting is served through an S3 bucket and distributed globally with CloudFront.",
       thumbnail: "/images/portfolio.jpg",
       techStack: {
-        Frontend: ["Vue", "Vite", "Tailwind CSS", "JavaScript"]
+        Frontend: ["Vue", "Vite", "Tailwind CSS", "JavaScript"],
+        Backend: ["C#", "AWS Lambda"],
+        API: ["API Gateway", "AWS SES"],
+        Cloud: ["S3", "CloudFront", "IAM", "ACM"],
+        Architecture: ["Serverless", "Environment Variables"]
       },
       github: "https://github.com/twoody0/MyPortfolio"
     }

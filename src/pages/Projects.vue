@@ -64,7 +64,7 @@
       title: "AI Storybook Generator",
       description:
         "A full-stack web app that lets users create personalized, illustrated children's stories using OpenAI.",
-      thumbnail: "/storybook.png",
+      //thumbnail: "/storybook.png",
       techStack: {
         Frontend: ["React", "Vite", "Tailwind CSS"],
         Backend: ["ASP.NET Core", "C#"],
@@ -78,7 +78,7 @@
       title: "Workout Tracker App",
       description:
         "A cross-platform .NET MAUI mobile app for tracking workouts and syncing with gym leaderboards.",
-      thumbnail: "/workout-tracker.png",
+      //thumbnail: "/workout-tracker.png",
       techStack: {
         Frontend: [".NET MAUI"],
         Backend: ["C#", "SQLite"],
@@ -90,7 +90,7 @@
       title: "Portfolio Website",
       description:
         "This is my live portfolio website! Built with Vue 3, Vite, and Tailwind CSS for the frontend. The backend is powered by AWS Lambda and API Gateway, with email notifications sent via Amazon SES. Static hosting is served through an S3 bucket and distributed globally with CloudFront.",
-      thumbnail: "/portfolio.png",
+      //thumbnail: "/portfolio.png",
       techStack: {
         Frontend: ["Vue", "Vite", "Tailwind CSS", "JavaScript"],
         Backend: ["C#", "AWS Lambda"],

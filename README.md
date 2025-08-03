@@ -33,7 +33,7 @@ This is the main monorepo for my personal developer portfolio. It includes both 
 
 > Clone this repo and navigate to each subdirectory for detailed setup instructions in their respective READMEs:
 
-- 📦 [Frontend README](./PortfolioFrontend/README.md)
+- 📦 [Frontend README](./client/README.md)
 - ⚙️ [Backend README](./PortfolioBackend/README.md)
 
 ---

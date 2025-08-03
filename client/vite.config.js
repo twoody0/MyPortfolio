@@ -9,11 +9,4 @@ export default defineConfig({
       vue(),
       tailwindcss(),
     ],
-    build: {
-      outDir: '../dist',
-      emptyOutDir: true,
-    },
-    server: {
-        port: 58176,
-    }
 })

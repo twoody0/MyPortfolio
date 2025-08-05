@@ -18,7 +18,7 @@
       </p>
 
       <p class="text-lg text-gray-300 leading-relaxed">
-        When I’m not coding, you’ll usually find me gaming on my PS5 or PC, hiking around the Pacific Northwest, or brainstorming new app ideas over coffee.
+        When I’m not coding, I’m usually working out, gaming on my PC, or sketching out new app ideas over a good cup of coffee.
       </p>
     </div>
 

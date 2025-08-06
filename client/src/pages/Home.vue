@@ -13,7 +13,7 @@
 
       <!-- Value Prop -->
       <p class="text-xl text-gray-300 opacity-0 animate-fadeInUp animation-delay-300">
-        I build performant web experiences with clean, modern code.
+        I build performant digital experiences—from websites to full-stack applications—using clean, modern code.
       </p>
 
       <!-- CTA -->

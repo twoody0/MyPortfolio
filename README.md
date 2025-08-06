@@ -51,3 +51,9 @@ dotnet test
 ## 📄 License
 
 This project is licensed under the MIT License. See [LICENSE.txt](./LICENSE.txt) for details.
+
+---
+
+## 🖼 Architecture Diagram
+
+![Portfolio Architecture Diagram](https://github.com/user-attachments/assets/64c1e507-dcbb-46f6-ae56-479cd865cef8)

@@ -20,10 +20,10 @@
         <div>
           <h2 class="text-2xl font-semibold mb-3">Backend</h2>
           <div class="flex flex-wrap gap-3">
-            <span class="bg-green-600 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-100">Node.js</span>
+            <!--<span class="bg-green-600 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-100">Node.js</span>-->
             <span class="bg-green-600 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-300">ASP.NET Core</span>
-            <span class="bg-green-600 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-500">Django</span>
-            <span class="bg-green-600 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-700">Flask</span>
+            <!--<span class="bg-green-600 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-500">Django</span>-->
+            <!--<span class="bg-green-600 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-700">Flask</span>-->
           </div>
         </div>
 

@@ -74,7 +74,7 @@
     if (!validateForm()) return
 
     try {
-      const response = await fetch(`${API_BASE}/contact`, {
+      const response = await fetch(`${API_BASE}/Contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

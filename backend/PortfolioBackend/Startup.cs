@@ -15,14 +15,20 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddControllers();
+        services.AddHttpClient();
         services.AddAWSService<IAmazonSimpleEmailService>();
         services.AddCors(options =>
         {
             options.AddDefaultPolicy(policy =>
             {
-                policy.AllowAnyOrigin()
-                      .AllowAnyMethod()
-                      .AllowAnyHeader();
+                policy
+                    .WithOrigins(
+                        "https://tyler-woody.dev",
+                        "http://localhost:5173",   // Vite
+                        "http://localhost:5174"   // Vite
+                    )
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
             });
         });
     }

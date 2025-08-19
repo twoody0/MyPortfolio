@@ -24,6 +24,8 @@ jobs:
 
       - name: Build project
         working-directory: ./client
+        env:
+          VITE_API_BASE: ${{ vars.VITE_API_BASE }}
         run: npm run build
 
       - name: Deploy to S3

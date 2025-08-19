@@ -4,12 +4,12 @@ namespace PortfolioBackend.Models;
 
 public class ContactRequest
 {
-    [Required]
-    public string Name { get; set; }
+    [Required, StringLength(80)]
+    public string Name { get; set; } = "";
 
-    [Required, EmailAddress]
-    public string Email { get; set; }
+    [Required, EmailAddress, StringLength(254)]
+    public string Email { get; set; } = "";
 
-    [Required]
-    public string Message { get; set; }
+    [Required, StringLength(4000)]
+    public string Message { get; set; } = "";
 }

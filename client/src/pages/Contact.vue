@@ -55,14 +55,35 @@
   const successMessage = ref('')
   const errorMessage = ref('')
 
+  const MAX_NAME = 80
+  const MAX_EMAIL = 254
+  const MAX_MESSAGE = 4000
+  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+  function trimAndCollapse(str) {
+    return str.replace(/\s+/g, ' ').trim()
+  }
+
   const validateForm = () => {
     errors.value = {}
 
-    if (!name.value.trim()) errors.value.name = "Name is required"
-    if (!email.value.trim()) errors.value.email = "Email is required"
-    else if (!/\S+@\S+\.\S+/.test(email.value)) errors.value.email = "Email is invalid"
+    const n = trimAndCollapse(name.value)
+    const e = email.value.trim()
+    const m = message.value
 
-    if (!message.value.trim()) errors.value.message = "Message is required"
+    if (!n) errors.value.name = 'Name is required'
+    else if (n.length > MAX_NAME) errors.value.name = `Name must be ≤ ${MAX_NAME} chars`
+
+    if (!e) errors.value.email = 'Email is required'
+    else if (e.length > MAX_EMAIL || !EMAIL_RE.test(e)) errors.value.email = 'Email is invalid'
+
+    if (!m.trim()) errors.value.message = 'Message is required'
+    else if (m.length > MAX_MESSAGE) errors.value.message = `Message must be ≤ ${MAX_MESSAGE} chars`
+
+    // write back normalized values so you don’t send weird whitespace
+    name.value = n
+    email.value = e
+    message.value = m
 
     return Object.keys(errors.value).length === 0
   }
@@ -84,19 +105,18 @@
         })
       })
 
-      const result = await response.json()
-
+      const result = await response.json().catch(() => ({}))
       if (response.ok) {
-        successMessage.value = result.message || "Message sent!"
+        successMessage.value = 'Message sent!'
         name.value = ''
         email.value = ''
         message.value = ''
       } else {
-        errorMessage.value = result.message || "Something went wrong."
+        errorMessage.value = 'Something went wrong. Please try again.'
         console.error('Server error:', result)
       }
     } catch (err) {
-      errorMessage.value = "Network error. Please try again later."
+      errorMessage.value = 'Network error. Please try again later.'
       console.error('Network error:', err)
     }
   }

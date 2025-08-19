@@ -21,7 +21,7 @@
           <h2 class="text-2xl font-semibold mb-3">Backend</h2>
           <div class="flex flex-wrap gap-3">
             <!--<span class="bg-green-600 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-100">Node.js</span>-->
-            <span class="bg-green-600 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-300">ASP.NET Core</span>
+            <span class="bg-green-600 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-100">ASP.NET Core</span>
             <!--<span class="bg-green-600 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-500">Django</span>-->
             <!--<span class="bg-green-600 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-700">Flask</span>-->
           </div>
@@ -43,10 +43,12 @@
           <h2 class="text-2xl font-semibold mb-3">Tools</h2>
           <div class="flex flex-wrap gap-3">
             <span class="bg-gray-700 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-100">Git</span>
-            <span class="bg-gray-700 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-300">Docker</span>
+            <span class="bg-gray-700 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-300">Visual Studio</span>
             <span class="bg-gray-700 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-500">VS Code</span>
+            <span class="bg-gray-700 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-500">IntelliJ IDea</span>
+            <span class="bg-gray-700 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-500">CLI</span>
             <span class="bg-gray-700 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-700">Postman</span>
-            <span class="bg-gray-700 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-900">Figma</span>
+            <!--<span class="bg-gray-700 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-900">Figma</span>-->
           </div>
         </div>
       </div>

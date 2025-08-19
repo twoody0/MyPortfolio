@@ -56,4 +56,4 @@ This project is licensed under the MIT License. See [LICENSE.txt](./LICENSE.txt)
 
 ## 🖼 Architecture Diagram
 
-![Portfolio Architecture Diagram](https://github.com/user-attachments/assets/64c1e507-dcbb-46f6-ae56-479cd865cef8)
+![Portfolio Architecture Diagram]([https://github.com/user-attachments/assets/64c1e507-dcbb-46f6-ae56-479cd865cef8](https://github.com/user-attachments/assets/7c8103a5-6dcb-4334-925a-6261a53d3e37))

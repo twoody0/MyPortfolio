@@ -45,7 +45,7 @@
             <span class="bg-gray-700 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-100">Git</span>
             <span class="bg-gray-700 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-300">Visual Studio</span>
             <span class="bg-gray-700 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-500">VS Code</span>
-            <span class="bg-gray-700 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-500">IntelliJ IDea</span>
+            <span class="bg-gray-700 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-500">IntelliJ IDEA</span>
             <span class="bg-gray-700 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-500">CLI</span>
             <span class="bg-gray-700 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-700">Postman</span>
             <!--<span class="bg-gray-700 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-900">Figma</span>-->

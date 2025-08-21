@@ -32,7 +32,7 @@ public class Startup
                     partitionKey: ip,
                     factory: _ => new FixedWindowRateLimiterOptions
                     {
-                        PermitLimit = 10,                 // max requests/min per IP
+                        PermitLimit = 5,                 // max requests/min per IP
                         Window = TimeSpan.FromMinutes(60),
                         QueueLimit = 0
                     });

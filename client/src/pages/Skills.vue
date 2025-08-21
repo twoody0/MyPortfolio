@@ -31,10 +31,10 @@
         <div>
           <h2 class="text-2xl font-semibold mb-3">Languages</h2>
           <div class="flex flex-wrap gap-3">
-            <span class="bg-purple-600 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-100">JavaScript</span>
-            <span class="bg-purple-600 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-300">Python</span>
-            <span class="bg-purple-600 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-500">C#</span>
-            <span class="bg-purple-600 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-700">Java</span>
+            <span class="bg-purple-600 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-100">C#</span>
+            <span class="bg-purple-600 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-300">Java</span>
+            <span class="bg-purple-600 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-500">Python</span>
+            <span class="bg-purple-600 px-4 py-2 rounded text-sm opacity-0 animate-fadeInLeft animation-delay-700">JavaScript</span>
           </div>
         </div>
 

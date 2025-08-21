@@ -80,7 +80,7 @@
     if (!m.trim()) errors.value.message = 'Message is required'
     else if (m.length > MAX_MESSAGE) errors.value.message = `Message must be ≤ ${MAX_MESSAGE} chars`
 
-    // write back normalized values so you don’t send weird whitespace
+    // write back normalized values so I don’t send weird whitespace
     name.value = n
     email.value = e
     message.value = m
